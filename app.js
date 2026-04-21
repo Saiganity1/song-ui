@@ -1,5 +1,5 @@
 // Update this URL to match your deployed Render Backend API URL
-const API_BASE_URL = 'YOUR_RENDER_BACKEND_URL_HERE'; // e.g., 'https://song-api-xxxx.onrender.com'
+const API_BASE_URL = 'https://song-api-g1nk.onrender.com'; // e.g., 'https://song-api-xxxx.onrender.com'
 
 const songForm = document.getElementById('song-form');
 const songList = document.getElementById('song-list');
