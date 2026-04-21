@@ -17,7 +17,8 @@ let allSongs = [];
 function getYoutubeId(title) {
     const knownSongs = {
         'one': 'ftjEcrrf7r0',
-        'sometimes': 't0nPrtYvMBw' 
+        'sometimes': 't0nPrtYvMBw',
+        'ligaya': 'x_uL1T2eIqM'
     };
     const key = title ? title.toLowerCase() : '';
     return knownSongs[key] || 'dQw4w9WgXcQ'; // Rickroll default if unknown
@@ -48,7 +49,8 @@ async function fetchSongs() {
         // Fallback for visual demonstration if API fails or is empty
         const mockSongs = [
             { id: 1, title: 'One', artist: 'U2', album: 'Achtung Baby', genre: 'Rock', youtubeId: 'ftjEcrrf7r0' },
-            { id: 2, title: 'Sometimes', artist: 'Britney Spears', album: 'Baby One More Time', genre: 'Pop', youtubeId: 't0nPrtYvMBw' }
+            { id: 2, title: 'Sometimes', artist: 'Britney Spears', album: 'Baby One More Time', genre: 'Pop', youtubeId: 't0nPrtYvMBw' },
+            { id: 3, title: 'Ligaya', artist: 'Eraserheads', album: 'Ultraelectromagneticpop!', genre: 'OPM', youtubeId: 'x_uL1T2eIqM' }
         ];
         allSongs = mockSongs;
         renderRecommended(mockSongs);
