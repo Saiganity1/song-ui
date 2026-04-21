@@ -84,7 +84,8 @@ function renderRecommended(songs) {
         card.dataset.id = song.id;
         
         // Thumbnail URL from Youtube ID
-        const thumbnailUrl = `https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`;
+        // Using 0.jpg as it is the most reliable fallback thumbnail for all videos
+        const thumbnailUrl = `https://img.youtube.com/vi/${song.youtubeId}/0.jpg`;
         
         card.innerHTML = `
             <div class="card-img-container">
