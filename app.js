@@ -17,8 +17,8 @@ let allSongs = [];
 function getYoutubeId(title) {
     const knownSongs = {
         'one': 'ftjEcrrf7r0',
-        'sometimes': 't0nPrtYvMBw',
-        'ligaya': 'x_uL1T2eIqM'
+        'sometimes': 't0bPrt69rag',
+        'ligaya': 'XibB-5BPdrY'
     };
     const key = title ? title.toLowerCase() : '';
     return knownSongs[key] || 'dQw4w9WgXcQ'; // Rickroll default if unknown
@@ -49,8 +49,8 @@ async function fetchSongs() {
         // Fallback for visual demonstration if API fails or is empty
         const mockSongs = [
             { id: 1, title: 'One', artist: 'U2', album: 'Achtung Baby', genre: 'Rock', youtubeId: 'ftjEcrrf7r0' },
-            { id: 2, title: 'Sometimes', artist: 'Britney Spears', album: 'Baby One More Time', genre: 'Pop', youtubeId: 't0nPrtYvMBw' },
-            { id: 3, title: 'Ligaya', artist: 'Eraserheads', album: 'Ultraelectromagneticpop!', genre: 'OPM', youtubeId: 'x_uL1T2eIqM' }
+            { id: 2, title: 'Sometimes', artist: 'Britney Spears', album: '...Baby One More Time', genre: 'Pop', youtubeId: 't0bPrt69rag' },
+            { id: 3, title: 'Ligaya', artist: 'Eraserheads', album: 'Ultraelectromagneticpop!', genre: 'OPM', youtubeId: 'XibB-5BPdrY' }
         ];
         allSongs = mockSongs;
         renderRecommended(mockSongs);
@@ -86,8 +86,7 @@ function renderRecommended(songs) {
         card.dataset.id = song.id;
         
         // Thumbnail URL from Youtube ID
-        // Using 0.jpg as it is the most reliable fallback thumbnail for all videos
-        const thumbnailUrl = `https://img.youtube.com/vi/${song.youtubeId}/0.jpg`;
+        const thumbnailUrl = `https://i.ytimg.com/vi/${song.youtubeId}/hqdefault.jpg`;
         
         card.innerHTML = `
             <div class="card-img-container">
